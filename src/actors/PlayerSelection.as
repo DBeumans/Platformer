@@ -1,35 +1,19 @@
 package actors 
 {
+	import flash.display.MovieClip;
 	import flash.events.Event;
-	import utils.Controller;
+	
 	/**
 	 * ...
 	 * @author Danilo
 	 */
-	public class PlayerSelection 
+	public class PlayerSelection extends MovieClip
 	{
-		private var _controller:Controller;
+		//private var _playerArt:MovieClip = new PlayerArt();
 		
 		public function PlayerSelection() 
 		{
-			addEventListener(Event.ADDED_TO_STAGE, init);
-			
-			_controller = new Controller();
-		}
-		
-		private function init(e:Event):void
-		{
-			removeEventListener(Event.ADDED_TO_STAGE, init);
-			
-			addEventListener(Event.ENTER_FRAME, update);
-			
-		}
-		private function update(e:Event):void
-		{
-			if (_controller.up)
-			{
-				
-			}
+			addChild(new PlayerArt);
 		}
 		
 	}

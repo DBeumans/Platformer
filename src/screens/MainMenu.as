@@ -14,6 +14,8 @@ package screens
 		private var test:MovieClip = new TestArt();
 		private var test2:MovieClip = new TestArt();
 		
+		public static const START_GAME:String = "start game";
+		
 		public function MainMenu()
 		{
 			addEventListener(Event.ADDED_TO_STAGE, init);
@@ -23,11 +25,11 @@ package screens
 		{
 			test.x = 400;
 			test.y = 100;
-			stage.addChild(test);
+			addChild(test);
 			
 			test2.x = 800;
 			test2.y = 100;
-			stage.addChild(test2);
+			addChild(test2);
 			
 			test.addEventListener(MouseEvent.CLICK, onClick);
 			test2.addEventListener(MouseEvent.CLICK, onClick);
@@ -37,10 +39,15 @@ package screens
 		{
 			if ( e.currentTarget == test)
 			{
+				test.removeEventListener(MouseEvent.CLICK, onClick);
+				test2.removeEventListener(MouseEvent.CLICK, onClick);
 				trace("Test is clickked");
+				dispatchEvent(new Event(START_GAME));
 			}
 			if ( e.currentTarget == test2)
 			{
+				test.removeEventListener(MouseEvent.CLICK, onClick);
+				test2.removeEventListener(MouseEvent.CLICK, onClick);
 				trace("Test2 is clicked");
 			}
 		}

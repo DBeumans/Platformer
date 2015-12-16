@@ -3,7 +3,10 @@ package
 	import flash.display.MovieClip;
 	import flash.events.Event;
 	
+	
+	
 	//import hier onderelkaar elke class van de folder "screens".
+	import screens.GameScreen;
 	import screens.MainMenu;
 	/**
 	 * ...
@@ -13,6 +16,7 @@ package
 	{
 		
 		private var _MainMenu:MainMenu;
+		private var _gameScreen:GameScreen;
 		
 		public function Main() 
 		{
@@ -32,6 +36,17 @@ package
 		{
 			_MainMenu = new MainMenu();
 			addChild(_MainMenu);
+			
+			_MainMenu.addEventListener(MainMenu.START_GAME, onStartGameScreen);
+			
+		}
+		private function onStartGameScreen(e:Event):void
+		{
+			removeChild(_MainMenu);
+			_gameScreen = new GameScreen();
+			addChild(_gameScreen);
+			
+			
 		}
 	}
 	

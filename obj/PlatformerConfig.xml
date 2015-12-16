@@ -3,6 +3,8 @@
 <!--Any modifications you make may be lost.-->
 <flex-config>
   <target-player>18.0</target-player>
+  <benchmark>false</benchmark>
+  <static-link-runtime-shared-libraries>true</static-link-runtime-shared-libraries>
   <compiler>
     <define append="true">
       <name>CONFIG::debug</name>
@@ -14,7 +16,7 @@
     </define>
     <define append="true">
       <name>CONFIG::timeStamp</name>
-      <value>'11-12-2015'</value>
+      <value>'16-12-2015'</value>
     </define>
     <define append="true">
       <name>CONFIG::air</name>
@@ -30,16 +32,16 @@
     </define>
     <verbose-stacktraces>true</verbose-stacktraces>
     <source-path append="true">
-      <path-element>H:\Platform\Platformer\src</path-element>
+      <path-element>C:\Users\Danilo\Documents\GitHub\Platformer\src</path-element>
       <path-element>C:\Program Files (x86)\FlashDevelop\Library\AS3\classes</path-element>
     </source-path>
     <library-path append="true">
-      <path-element>H:\Platform\Platformer\lib</path-element>
-      <path-element>H:\Platform\Platformer\lib\Assets.swc</path-element>
+      <path-element>C:\Users\Danilo\Documents\GitHub\Platformer\lib</path-element>
+      <path-element>C:\Users\Danilo\Documents\GitHub\Platformer\lib\Assets.swc</path-element>
     </library-path>
   </compiler>
   <file-specs>
-    <path-element>H:\Platform\Platformer\src\Main.as</path-element>
+    <path-element>C:\Users\Danilo\Documents\GitHub\Platformer\src\Main.as</path-element>
   </file-specs>
   <default-background-color>#000000</default-background-color>
   <default-frame-rate>60</default-frame-rate>
